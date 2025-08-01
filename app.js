@@ -1,18 +1,11 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const authRoutes = require("./routes/authRoutes");
-
-// Middleware
 app.use(cors());
 app.use(express.json());
+const authRoutes = require("./routes/authRoutes");
+
 const sessionRoutes = require("./routes/sessionRoutes");
-const app = express();
-
-// ✅ MIDDLEWARE — MUST COME BEFORE ROUTES
-app.use(cors());
-app.use(express.json()); // Required to parse JSON in req.body
-
 // ✅ ROUTES
 app.use("/api/auth", authRoutes);
 
