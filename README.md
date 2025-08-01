@@ -16,3 +16,9 @@ This is the backend server for the Arvyax Wellness platform, built with **Node.j
 
 ## 📁 Folder Structure
 
+/controllers → Route logic
+/models → Mongoose models
+/routes → API endpoints
+/middleware → Auth middleware
+app.js → Entry point
+.env → Environment variables
