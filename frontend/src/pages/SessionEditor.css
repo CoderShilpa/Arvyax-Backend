@@ -1,0 +1,63 @@
+.editor-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: linear-gradient(to right, #f9f9f9, #e0eaff);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+.editor-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.editor-container label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.editor-container input,
+.editor-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.editor-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.editor-buttons button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #2980b9;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.editor-buttons button:hover {
+  background-color: #3498db;
+}
+
+.last-saved {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+}
+.status-text {
+  margin-top: 15px;
+  color: green;
+  font-style: italic;
+}
+

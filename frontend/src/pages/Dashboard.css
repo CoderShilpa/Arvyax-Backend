@@ -1,0 +1,133 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f8e1f4, #e0f7fa);
+  color: #333;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.dashboard-navbar {
+  background-color: #ffffff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.brand-title {
+  font-size: 28px;
+  color: #6a1b9a;
+  margin: 0;
+  font-weight: bold;
+}
+
+.dashboard-links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #6a1b9a;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.dashboard-links a:hover {
+  color: #ab47bc;
+}
+
+/* Hero section */
+.dashboard-hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom right, #ede7f6, #e3f2fd);
+}
+
+.dashboard-hero h2 {
+  font-size: 36px;
+  color: #4a148c;
+  margin-bottom: 15px;
+}
+
+.dashboard-hero p {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Create button */
+.dashboard-buttons .create-btn {
+  background-color: #6a1b9a;
+  color: #fff;
+  padding: 12px 26px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.dashboard-buttons .create-btn:hover {
+  background-color: #8e24aa;
+}
+
+/* Public sessions */
+.public-sessions {
+  padding: 40px 40px 60px;
+}
+
+.public-sessions h3 {
+  font-size: 26px;
+  margin-bottom: 24px;
+  color: #333;
+  border-left: 5px solid #6a1b9a;
+  padding-left: 12px;
+}
+
+.session-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.session-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 6px solid #6a1b9a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.session-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.session-card h4 {
+  margin-top: 0;
+  color: #4a148c;
+  font-size: 20px;
+}
+
+.session-card p {
+  margin: 6px 0;
+  color: #444;
+}
+
+.session-card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #1e88e5;
+  text-decoration: underline;
+  font-weight: 500;
+}

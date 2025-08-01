@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "title": "Sunset Relaxation",
+    "tags": ["meditation", "evening"],
+    "json_file_url": "https://example.com/sunset.json",
+    "status": "draft"
+  },
+  {
+    "id": "2",
+    "title": "Energy Boost Yoga",
+    "tags": ["yoga", "morning"],
+    "json_file_url": "https://example.com/yoga.json",
+    "status": "published"
+  }
+]
