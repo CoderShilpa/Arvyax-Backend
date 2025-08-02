@@ -11,6 +11,10 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // Required to parse JSON in req.body
 
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
 // ✅ ROUTES
 app.use("/api/auth", authRoutes);
 

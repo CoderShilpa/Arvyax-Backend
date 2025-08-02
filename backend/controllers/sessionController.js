@@ -77,11 +77,35 @@ const publishSession = async (req, res) => {
     res.status(500).json({ msg: "Server error" });
   }
 };
+const updateSession = async (req, res) => {
+  try {
+    const session = await Session.findOne({
+      _id: req.params.id,
+      user: req.user.id,
+    });
+
+    if (!session) {
+      return res.status(404).json({ msg: "Session not found" });
+    }
+
+    session.title = req.body.title;
+    session.tags = req.body.tags;
+    session.jsonUrl = req.body.jsonUrl;
+
+    await session.save();
+
+    res.json({ msg: "Session updated successfully" });
+  } catch (error) {
+    console.error("Update error:", error);
+    res.status(500).json({ msg: "Server error" });
+  }
+};
 
 module.exports = {
   getAllPublishedSessions,
   getUserSessions,
   getSingleSession,
   saveDraftSession,
+  updateSession,
   publishSession,
 };

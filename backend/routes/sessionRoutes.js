@@ -6,6 +6,7 @@ const {
   getUserSessions,
   getSingleSession,
   saveDraftSession,
+  updateSession,
   publishSession,
 } = require("../controllers/sessionController");
 
@@ -14,11 +15,10 @@ router.get("/sessions", getAllPublishedSessions);
 
 // Authenticated
 router.get("/my-sessions", authenticateToken, getUserSessions);
-router.get("/my-sessions/:id", authenticateToken, getSingleSession);
-router.post("/my-sessions/save-draft", authenticateToken, saveDraftSession);
+router.get("/my-sessions/:id", authenticateToken, getSingleSession); // ✅ for fetching
+router.post("/my-sessions/save-draft", authenticateToken, saveDraftSession); // ✅ for new session
+router.put("/my-sessions/:id", authenticateToken, updateSession); // ✅ for editing
 router.post("/my-sessions/publish", authenticateToken, publishSession);
-
-// ✅ New route to fix 404 error from frontend (SessionEditor.jsx)
-router.post("/sessions", authenticateToken, saveDraftSession); // <--- This is the missing route
+router.post("/sessions", authenticateToken, saveDraftSession); // optionally needed
 
 module.exports = router;
